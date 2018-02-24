@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <span>第五章 引用类型</span>
+    <script type="text/javascript">
+        // 对象转换方法
+        function Changetion() {
+            var a = {
+                name: 'lin',
+                age: 24
+            };
+
+            var b = ['re1', 'Re2', 're3'];
+            console.log(b.toString());
+            console.log(b.valueOf());
+            console.log(b);
+            console.log(b.toLocaleString());
+        }
+
+        // 比较函数
+        function Comparetion() {
+            function compare(val1, val2) {
+                if (val1 > val2) {
+                    return 1;
+                } else if (val2 > val1) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+            // 数字-升序
+            function comparea(val1, val2) {
+                return val1 - val2;
+            }
+            // 数字-降序
+            function compared(val1, val2) {
+                return val2 - val1;
+            }
+            var c = [0, 5, 10, 15, 25, '12', 'c', 'a'];
+            console.log(c.sort(compare)); // [0, 5, 10, "12", 15, 25, "a", "c"]
+            console.log(c.sort(comparea)); // [0, 5, 10, "12", 15, 25, "c", "a"]
+            console.log(c.sort(compared)); // [25, 15, "12", 10, 5, 0, "c", "a"]
+        }
+
+        // 数组迭代方法
+        function Iteration() {
+            var numbers = [1,2,3,4,5,4,3,2,1];
+
+            var everyResult = numbers.every(function(item, index, array){
+                return (item > 2);
+            });
+            console.log("everyResult:", everyResult); // false
+
+            var someResult = numbers.some(function(item, index, array){
+                return (item > 2);
+            });
+            console.log("someResult", someResult); // true
+
+            var filterResult = numbers.filter(function(item, index, array){
+                return (item > 2);
+            });
+            console.log("filterResult", filterResult); // [3, 4, 5, 4, 3]
+
+            var mapResult = numbers.map(function(item, index, array){
+                return (item * 2);
+            });
+            console.log("mapResult", mapResult); // [2, 4, 6, 8, 10, 8, 6, 4, 2]
+
+            numbers.forEach(function(item, index, array){
+                numbers[index] =  item * 3;
+            });
+            console.log("forEachResult", numbers); // [3, 6, 9, 12, 15, 12, 9, 6, 3]
+        }
+
+        // 缩小方法
+        function Reducetion() {
+            var values = [1,2,3,4,5];
+            var sum = values.reduce(function(prev, cur, index, array){
+                return prev + cur;
+            });
+            console.log(sum); // 15
+        }
+
+        // 日期格式化方法
+        function Timechange(){
+            var times = new Date(2018, 2, 23, 10, 23, 24);
+            console.log(times.toDateString()); // Fri Mar 23 2018
+            console.log(times.toTimeString()); // 10:23:24 GMT+0800 (中国标准时间)
+            console.log(times.toLocaleDateString()); // 2018/3/23
+            console.log(times.toLocaleTimeString()); // 上午10:23:24
+            console.log(times.toUTCString()); // Fri, 23 Mar 2018 02:23:24 GMT
+        }
+        
+
+
+
+    </script>
+</body>
+</html>
