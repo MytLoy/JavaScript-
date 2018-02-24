@@ -8,7 +8,7 @@
     <span>第五章 引用类型</span>
     <script type="text/javascript">
         // 对象转换方法
-        function Changetion() {
+        function changetion() {
             var a = {
                 name: 'lin',
                 age: 24
@@ -22,7 +22,7 @@
         }
 
         // 比较函数
-        function Comparetion() {
+        function comparetion() {
             function compare(val1, val2) {
                 if (val1 > val2) {
                     return 1;
@@ -47,7 +47,7 @@
         }
 
         // 数组迭代方法
-        function Iteration() {
+        function iteration() {
             var numbers = [1,2,3,4,5,4,3,2,1];
 
             var everyResult = numbers.every(function(item, index, array){
@@ -77,7 +77,7 @@
         }
 
         // 缩小方法
-        function Reducetion() {
+        function reducetion() {
             var values = [1,2,3,4,5];
             var sum = values.reduce(function(prev, cur, index, array){
                 return prev + cur;
@@ -86,7 +86,7 @@
         }
 
         // 日期格式化方法
-        function Timechange(){
+        function timechange(){
             var times = new Date(2018, 2, 23, 10, 23, 24);
             console.log(times.toDateString()); // Fri Mar 23 2018
             console.log(times.toTimeString()); // 10:23:24 GMT+0800 (中国标准时间)
