@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <span>第八章 BOM</span>
+    <script type="text/javascript">
+        // 窗口(视口)大小
+        function windowsize() {
+            var pageWith = window.innerWidth;
+            var pageHeight = window.innerHeight;
+            if (typeof pageWith != "number") {
+                if (document.compatMode == "CsslCompat") {
+                    pageWith = document.documentElement.clientWidth;
+                    pageHeight = document.documentElement.clientHeight;
+                } else {
+                    pageWith = document.body.clientWidth;
+                    pageHeight = document.body.clientHeight;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
