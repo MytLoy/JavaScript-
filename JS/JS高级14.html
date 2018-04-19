@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <span>第十四章 表单脚本</span>
+
+  <iframe src="https://www.baidu.com/" name="richedit" style="height:600px;width:100%" frameborder="0"></iframe>
+
+  <div class="editable" id="richedit" contenteditable>
+    <h1>这是好</h1>
+  </div>
+  
+
+  <script type="text/javascript">
+    frames["richedit"].document.designMode = "on";
+
+    var div = document.getElementById("richedit");
+    div.contenteditable = "true";
+  </script>
+</body>
+
+</html>
