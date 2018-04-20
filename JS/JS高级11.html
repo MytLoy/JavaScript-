@@ -1,36 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <span>第十一章 DOM扩展</span>
-    
-    <div id="myDiv" class="bd user disabled">1</div>
 
-    <script type="text/javascript">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <span>第十一章 DOM扩展</span>
+
+  <div id="myDiv" class="bd user disabled">1</div>
+
+  <script type="text/javascript">
     var div = document.getElementById("myDiv");
 
     // 原始
     var className = div.className.split(/\s+/);
     var pos = -1,
-        i,
-        len;
+      i,
+      len;
     for (i = 0, len = className.length; i < len; i++) {
-        if (className[i] === "user") {
-            pos = i;
-            break;
-        }
+      if (className[i] === "user") {
+        pos = i;
+        break;
+      }
     };
     className.splice(i, 1);
     div.className = className.join(" ");
 
     // 扩展
     div.classList.remove("bd");
-
-
-
-    </script>
+  </script>
 </body>
+
 </html>
